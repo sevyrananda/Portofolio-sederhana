@@ -102,12 +102,6 @@ nav {
   margin: 0 72px;
 }
 
-/* nav .logo {
-  font-size: 32px;
-  color: var(--neutral);
-  font-weight: 600;
-} */
-
 nav .logo a {
   font-size: 32px;
   color: var(--neutral);
@@ -555,17 +549,6 @@ footer .social-media a {
   margin: 1rem;
 }
 
-footer .links a {
-  font-size: 14px;
-  color: #fefefe;
-  margin: 8px;
-  font-weight: 400;
-}
-
-footer .links a:hover {
-  color: #ff6000;
-}
-
 footer .credit {
   padding: 24px;
 }
@@ -605,4 +588,114 @@ footer .credit p {
   width: 18px;
   height: 18px;
   stroke-width: 3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 40px; 
+  height: 40px; 
+  margin-right: 8px; 
+  object-fit: cover;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typing-animation {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  width: 20ch;
+  animation: typing 3.5s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+.header-action-area {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #403e34; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #23272b; 
+}
+
+/* Modal styling */
+.modal {
+  display: none; /* Tersembunyi secara default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background transparan */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background: white; /* Warna latar belakang konten modal */
+  padding: 1rem;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000; /* Merah saat di-hover */
 }

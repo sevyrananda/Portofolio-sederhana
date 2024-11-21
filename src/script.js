@@ -46,3 +46,56 @@ backTop.addEventListener("click", () => {
     // duration: 123
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const textElement = document.getElementById('animated-text');
+  const textToType = 'Web Developer';
+  let index = 0;
+
+  function typeText() {
+      if (index < textToType.length) {
+          textElement.textContent += textToType.charAt(index);
+          index++;
+          setTimeout(typeText, 150);
+      } else {
+          setTimeout(eraseText, 2000);
+      }
+  }
+
+  function eraseText() {
+      if (index > 0) {
+          textElement.textContent = textElement.textContent.substring(0, index - 1);
+          index--;
+          setTimeout(eraseText, 100);
+      } else {
+          setTimeout(typeText, 500);
+      }
+  }
+
+  typeText();
+});
+
+// JavaScript untuk menangani modal
+document.addEventListener("DOMContentLoaded", () => {
+  const openCVButton = document.getElementById("open-cv-btn");
+  const modal = document.getElementById("cv-modal");
+  const closeModalButton = document.querySelector(".close-btn");
+
+  // Buka modal saat tombol "Curriculum Vitae" diklik
+  openCVButton.addEventListener("click", () => {
+      modal.style.display = "flex";
+  });
+
+  // Tutup modal saat tombol close (x) diklik
+  closeModalButton.addEventListener("click", () => {
+      modal.style.display = "none";
+  });
+
+  // Tutup modal jika area luar modal diklik
+  window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  });
+});
+
