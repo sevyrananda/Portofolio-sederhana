@@ -99,3 +99,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('toggle-cards');
+  const cards = document.querySelectorAll('.work-card');
+  const hiddenClass = 'hidden';
+
+  // Initially hide some cards
+  cards.forEach((card, index) => {
+      if (index >= 4) card.classList.add(hiddenClass);
+  });
+
+  toggleButton.addEventListener('click', () => {
+      const isShowingMore = toggleButton.textContent === 'Show Less';
+
+      cards.forEach((card, index) => {
+          if (index >= 4) {
+              card.classList.toggle(hiddenClass, isShowingMore);
+          }
+      });
+
+      toggleButton.textContent = isShowingMore ? 'Show More' : 'Show Less';
+  });
+});
+
+
