@@ -4,7 +4,7 @@ export const projects = [
     category: "Web App",
     featured: true,
     image: "/projects/sentimently.png",
-    desc: "Sentimently merupakan aplikasi web analisis sentimen berbasis Artificial Intelligence yang dikembangkan sebagai proyek tugas akhir. Aplikasi ini melakukan crawling data Twitter/X, preprocessing teks, dan klasifikasi sentimen menggunakan algoritma Naive Bayes dan LSTM untuk menentukan sentimen positif, negatif, atau netral terhadap isu boikot produk. Sistem dilengkapi dashboard visualisasi, daftar produk yang sedang dibahas, serta fitur prediksi sentimen secara real-time. Sebagai Full-Stack Developer, saya mengembangkan seluruh komponen aplikasi mulai dari pengolahan data, pelatihan model, integrasi AI, backend Flask, database, hingga antarmuka pengguna. Model yang dikembangkan berhasil mencapai akurasi prediksi hingga 80%.",
+    desc: "Aplikasi analisis sentimen berbasis AI yang saya kembangkan sebagai Full-Stack Developer menggunakan Flask, Naive Bayes, dan LSTM. Mendukung crawling Twitter/X, visualisasi data, dan prediksi sentimen dengan akurasi hingga 80%.",
     longDesc: "",
     tech: [
       "Python",
