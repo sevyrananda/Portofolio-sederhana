@@ -352,7 +352,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none mix-blend-overlay" />
 
                 <img
-                  src="/src/assets/foto.png"
+                  src="/foto.png"
                   alt="Sevyra Nanda Portrait"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
